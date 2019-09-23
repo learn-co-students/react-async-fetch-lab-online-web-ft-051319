@@ -18,15 +18,10 @@ export default class App extends Component {
     // .then(json=>console.log(json))
   }
 
-  renderPeople = () => {
-    console.log(this.state)
-    this.state.people.map(p=><p>p.name</p>)
-  }
-
   render(){
     return(
       <div className='people'>
-      {this.renderPeople()}
+      {this.state.people.map((person, id)=><p key={id}>{person.name}</p>)}
       </div>
     )
   }
